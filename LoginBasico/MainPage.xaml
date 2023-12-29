@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginBasico.MainPage"
+             Shell.NavBarIsVisible="False" Background="black">
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <Frame BackgroundColor="Black" BorderColor="White" HeightRequest="650" WidthRequest="350">
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0">
+                    <Image Margin="0,0" HeightRequest="90" WidthRequest="98" Source="perfil.jpg" />
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50,0,0,50"/>
+                    </Border.StrokeShape>
+                </Border>
+                <Label Grid.Row="1"  Text="B I E N V E N I D O" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="White" />
+                <Entry x:Name="usernameEntry" Grid.Row="2" Placeholder="Usuario" PlaceholderColor="Wheat" TextColor="White"  />
+                <Entry  x:Name="passwordEntry" Grid.Row="3" Placeholder="Contraseña" PlaceholderColor="Wheat" IsPassword="True" TextColor="White" />
+                <Button Grid.Row="4" x:Name="logginBTN" Text="Iniciar Sesión" Background="#00D1FF" TextColor="Black" Clicked="logginBTN_Clicked" />
+                <Button Grid.Row="5" Text="Registrate" Background="#00FF04" TextColor="Black" />
+                <Label Grid.Row="6" Text="Olvidaste tu contraseña" HorizontalOptions="Center" TextColor="#FFAA00"/>
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
